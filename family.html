@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Keluarga Cemara - DODO FAMILY</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--p:#6366F1;--ph:#4F46E5;--pl:#EEF2FF;--bg:#F9FAFB;--w:#fff;--t:#1F2937;--tl:#6B7280;--b:#E5E7EB;--r:#EF4444;--rh:#DC2626}
+body{font-family:Inter,sans-serif;background:var(--bg);color:var(--t);display:flex;min-height:100vh}
+.s{width:300px;background:var(--w);border-right:1px solid var(--b);padding:20px;display:flex;flex-direction:column;position:fixed;height:100vh;left:-300px;transition:.4s;z-index:100;overflow-y:auto}
+.s.show{left:0;box-shadow:0 0 40px rgba(0,0,0,.1)}
+@keyframes i{from{opacity:0;transform:translateX(-15px)}to{opacity:1;transform:translateX(0)}}
+.l{display:flex;align-items:center;gap:10px;padding-bottom:20px;margin-bottom:16px;border-bottom:1px solid var(--b);animation:i.5s}
+.li{width:36px;height:36px;background:linear-gradient(135deg,var(--p),var(--ph));border-radius:10px;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;animation:pu 2s infinite}
+@keyframes pu{0%,100%{transform:scale(1)}50%{transform:scale(1.08)}}
+.lt{font-size:16px;font-weight:700;color:var(--p);line-height:1.2}
+.ls{font-size:11px;color:var(--tl);font-weight:500}
+.m{flex:1;display:flex;flex-direction:column;gap:4px}
+.b{display:flex;align-items:center;gap:10px;padding:11px 14px;border-radius:10px;color:var(--tl);font-weight:500;font-size:14px;transition:.3s;cursor:pointer;border:none;background:none;width:100%;text-align:left;animation:i.5s backwards}
+.b:nth-child(1){animation-delay:.1s}.b:nth-child(2){animation-delay:.2s}.b:nth-child(3){animation-delay:.3s}.b:nth-child(4){animation-delay:.4s}.b:nth-child(5){animation-delay:.5s}
+.b:hover{background:var(--pl);color:var(--p);transform:translateX(3px)}
+.b.a{background:var(--p);color:#fff}
+.d{height:1px;background:var(--b);margin:12px 0;animation:i.5s.6s backwards}
+.ft{font-size:12px;font-weight:600;color:var(--tl);padding:0 14px;margin-bottom:8px;text-transform:uppercase;letter-spacing:1px;animation:i.5s.7s backwards}
+.fl{display:flex;flex-direction:column;gap:6px}
+.fi{display:flex;align-items:center;gap:10px;padding:8px 14px;border-radius:8px;font-size:14px;color:var(--t);animation:i.5s backwards;cursor:pointer;transition:.3s}
+.fi:nth-child(1){animation-delay:.8s}.fi:nth-child(2){animation-delay:.9s}.fi:nth-child(3){animation-delay:1s}.fi:nth-child(4){animation-delay:1.1s}.fi:nth-child(5){animation-delay:1.2s}.fi:nth-child(6){animation-delay:1.3s}.fi:nth-child(7){animation-delay:1.4s}.fi:nth-child(8){animation-delay:1.5s}.fi:nth-child(9){animation-delay:1.6s}
+.fi:hover{background:var(--pl);transform:translateX(3px)}
+.fd{width:8px;height:8px;background:var(--p);border-radius:50%}
+.mn{flex:1;padding:20px;width:100%}
+.h{display:flex;align-items:center;gap:12px;margin-bottom:24px}
+.mt{width:40px;height:40px;background:var(--w);border:1px solid var(--b);border-radius:10px;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:.3s}
+.mt:hover{background:var(--pl);transform:rotate(90deg)}
+.tt{font-size:24px;font-weight:700}
+.pg{display:none;animation:f.4s}
+.pg.show{display:block}
+@keyframes f{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+.cd{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
+.c{background:var(--w);border:1px solid var(--b);border-radius:14px;padding:20px;transition:.4s;animation:u.5s backwards;position:relative}
+.c:nth-child(1){animation-delay:.1s}.c:nth-child(2){animation-delay:.2s}.c:nth-child(3){animation-delay:.3s}
+@keyframes u{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+.c:hover{transform:translateY(-6px);box-shadow:0 15px 30px rgba(99,102,241,.12);border-color:var(--p)}
+.cl{font-size:13px;color:var(--tl);margin-bottom:6px}
+.cv{font-size:28px;font-weight:700;background:linear-gradient(135deg,var(--p),var(--ph));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.cd2{font-size:12px;color:var(--tl);margin-top:3px}
+.lst{display:flex;flex-direction:column;gap:10px}
+.it{background:var(--w);border:1px solid var(--b);border-radius:12px;padding:14px 16px;display:flex;align-items:center;gap:12px;transition:.3s;animation:u.4s backwards}
+.it:hover{border-color:var(--p);transform:translateX(6px)}
+.av{width:42px;height:42px;border-radius:10px;background:linear-gradient(135deg,var(--p),var(--ph));display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700}
+.n{font-weight:600;font-size:15px}
+.pg2{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
+.pc{background:var(--w);border:1px solid var(--b);border-radius:14px;overflow:hidden;transition:.4s;animation:u.5s backwards}
+.pc:hover{transform:translateY(-8px);box-shadow:0 20px 40px rgba(99,102,241,.15);border-color:var(--p)}
+.pc img{width:100%;height:320px;object-fit:cover;image-rendering:-webkit-optimize-contrast;image-rendering:crisp-edges}
+.pi{padding:16px}
+.pn{font-size:16px;font-weight:700;margin-bottom:4px}
+.pr{font-size:13px;color:var(--tl)}
+.o{position:fixed;inset:0;background:rgba(0,0,0,.2);backdrop-filter:blur(3px);opacity:0;visibility:hidden;transition:.3s;z-index:99}
+.o.show{opacity:1;visibility:visible}
+.ah{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px}
+.ba{padding:10px 16px;background:var(--p);color:#fff;border:none;border-radius:10px;font-weight:600;font-size:14px;cursor:pointer;transition:.3s;display:flex;align-items:center;gap:6px}
+.ba:hover{background:var(--ph);transform:scale(1.05)}
+.bd{position:absolute;top:12px;right:12px;width:32px;height:32px;background:var(--r);color:#fff;border:none;border-radius:8px;cursor:pointer;transition:.3s;display:flex;align-items:center;justify-content:center;opacity:0}
+.c:hover .bd{opacity:1}
+.bd:hover{background:var(--rh);transform:scale(1.1)}
+.md{position:fixed;inset:0;background:rgba(0,0,0,.5);backdrop-filter:blur(5px);display:none;align-items:center;justify-content:center;z-index:200;padding:20px}
+.md.show{display:flex;animation:f.3s}
+.mb{background:var(--w);border-radius:16px;padding:24px;max-width:380px;width:100%;animation:u.3s}
+.mt2{font-size:20px;font-weight:700;margin-bottom:16px;text-align:center}
+.mi{width:100%;padding:12px 14px;border:1px solid var(--b);border-radius:10px;font-size:14px;font-family:Inter,sans-serif;margin-bottom:12px;transition:.3s}
+.mi:focus{outline:none;border-color:var(--p);box-shadow:0 0 0 3px var(--pl)}
+.mbtn{display:flex;gap:10px;margin-top:16px}
+.mbt{flex:1;padding:12px;border:none;border-radius:10px;font-weight:600;font-size:14px;cursor:pointer;transition:.3s}
+.mbt.ok{background:var(--p);color:#fff}
+.mbt.ok:hover{background:var(--ph)}
+.mbt.cc{background:var(--b);color:var(--t)}
+.mbt.cc:hover{background:#d1d5db}
+.e{text-align:center;padding:40px 20px;color:var(--tl)}
+.pin-dots{display:flex;gap:12px;justify-content:center;margin-bottom:20px}
+.pin-dot{width:14px;height:14px;border-radius:50%;border:2px solid var(--b);transition:.2s}
+.pin-dot.f{background:var(--p);border-color:var(--p);transform:scale(1.2)}
+.pin-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:16px}
+.pin-btn{aspect-ratio:1;background:var(--bg);border:1px solid var(--b);border-radius:14px;font-size:20px;font-weight:600;color:var(--t);cursor:pointer;transition:.2s}
+.pin-btn:active{transform:scale(0.9);background:var(--p);color:#fff}
+.pin-btn.del{font-size:16px}
+@media(min-width:1024px){.s{position:relative;left:0}.mt,.o{display:none}}
+</style>
+</head>
+<body>
+<div class="o" id="ov"></div>
+<aside class="s" id="side">
+<div class="l"><div class="li">D</div><div><div class="lt">Keluarga Cemara</div><div class="ls">DODO FAMILY</div></div></div>
+<nav class="m">
+<button class="b a" data-p="dash">📊 Dashboard</button>
+<button class="b" data-p="acara">📅 Acara</button>
+<button class="b" data-p="anggota">👥 Anggota</button>
+<button class="b" data-p="papa">👨 Papa Rido</button>
+<button class="b" data-p="foto">📷 Lihat Foto Keluarga</button>
+</nav>
+<div class="d"></div>
+<div class="ft">Anggota Keluarga Cemara</div>
+<div class="fl">
+<div class="fi" data-p="foto"><div class="fd"></div>Zahwan</div>
+<div class="fi" data-p="foto"><div class="fd"></div>Salsa</div>
+<div class="fi" data-p="foto"><div class="fd"></div>Bella</div>
+<div class="fi" data-p="foto"><div class="fd"></div>Kartika</div>
+<div class="fi" data-p="foto"><div class="fd"></div>Maryam</div>
+<div class="fi" data-p="foto"><div class="fd"></div>Mama Kila</div>
+<div class="fi" data-p="foto"><div class="fd"></div>Om Arkan</div>
+<div class="fi" data-p="foto"><div class="fd"></div>Om Arka</div>
+<div class="fi" data-p="foto"><div class="fd"></div>Malika</div>
+</div>
+</aside>
+<main class="mn">
+<div class="h">
+<button class="mt" id="toggle"><svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+<h1 class="tt" id="ttl">Dashboard Keluarga Cemara</h1>
+</div>
+<div class="pg show" id="dash">
+<div class="cd">
+<div class="c"><div class="cl">Total Anggota</div><div class="cv">9</div><div class="cd2">Keluarga besar yang hangat & rukun</div></div>
+<div class="c"><div class="cl">Acara Bulan Ini</div><div class="cv" id="ac">2</div><div class="cd2">Klik menu Acara untuk lihat detail</div></div>
+<div class="c"><div class="cl">Kepala Keluarga</div><div class="cv" style="font-size:20px">Papa Rido</div><div class="cd2">Harta yang paling berharga adalah keluarga</div></div>
+</div>
+</div>
+<div class="pg" id="acara">
+<div class="ah"><div style="font-size:18px;font-weight:700">Daftar Acara</div><button class="ba" id="btn-add"><svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>Tambah Acara</button></div>
+<div class="cd" id="al"></div>
+<div class="e" id="ae" style="display:none">Belum ada acara. Klik "Tambah Acara" untuk buat baru!</div>
+</div>
+<div class="pg" id="anggota">
+<div class="lst">
+<div class="it" style="animation-delay:.1s"><div class="av">Z</div><div class="n">Zahwan</div></div>
+<div class="it" style="animation-delay:.2s"><div class="av">S</div><div class="n">Salsa</div></div>
+<div class="it" style="animation-delay:.3s"><div class="av">B</div><div class="n">Bella</div></div>
+<div class="it" style="animation-delay:.4s"><div class="av">K</div><div class="n">Kartika</div></div>
+<div class="it" style="animation-delay:.5s"><div class="av">M</div><div class="n">Maryam</div></div>
+<div class="it" style="animation-delay:.6s"><div class="av">MK</div><div class="n">Mama Kila</div></div>
+<div class="it" style="animation-delay:.7s"><div class="av">OA</div><div class="n">Om Arkan</div></div>
+<div class="it" style="animation-delay:.8s"><div class="av">OA</div><div class="n">Om Arka</div></div>
+<div class="it" style="animation-delay:.9s"><div class="av">M</div><div class="n">Malika</div></div>
+</div>
+</div>
+<div class="pg" id="papa">
+<div class="c"><div class="cl">Kepala Keluarga Cemara</div><div class="cv" style="font-size:24px">Papa Rido</div><div class="cd2" style="margin-top:10px;line-height:1.6">Harta yang paling berharga adalah keluarga. Papa Rido memimpin Keluarga Cemara dengan penuh kasih sayang, kesederhanaan, dan kebersamaan 💜</div></div>
+</div>
+<div class="pg" id="foto">
+<div class="pg2">
+<div class="pc" style="animation-delay:.1s"><img src="https://www.image2url.com/r2/default/images/1776488131969-9708d761-16e0-41a7-b0e8-9112db6dbcb9.webp" alt="Papa Rido" loading="lazy" decoding="async"><div class="pi"><div class="pn">Papa Rido</div><div class="pr">Kepala Keluarga Cemara</div></div></div>
+<div class="pc" style="animation-delay:.2s"><img src="https://i.ibb.co/XR6R6vN/kila.jpg" alt="Mama Kila" loading="lazy" decoding="async" onerror="this.src='https://i.ibb.co/XR6R6vN.png'"><div class="pi"><div class="pn">Mama Kila</div><div class="pr">Ibu Keluarga Cemara</div></div></div>
+<div class="pc" style="animation-delay:.3s"><img src="https://i.ibb.co/yFvdrSPb/zahwan.jpg" alt="Zahwan" loading="lazy" decoding="async" onerror="this.src='https://i.ibb.co/yFvdrSPb.png'"><div class="pi"><div class="pn">Zahwan</div><div class="pr">Anggota Keluarga</div></div></div>
+<div class="pc" style="animation-delay:.4s"><img src="https://i.ibb.co/Vp3nDD4m/salsa.jpg" alt="Salsa" loading="lazy" decoding="async" onerror="this.src='https://i.ibb.co/Vp3nDD4m.png'"><div class="pi"><div class="pn">Salsa</div><div class="pr">Anggota Keluarga</div></div></div>
+<div class="pc" style="animation-delay:.5s"><img src="https://i.ibb.co/nqQKbPFS/bella.jpg" alt="Bella" loading="lazy" decoding="async" onerror="this.src='https://i.ibb.co/nqQKbPFS.png'"><div class="pi"><div class="pn">Bella</div><div class="pr">Anggota Keluarga</div></div></div>
+<div class="pc" style="animation-delay:.6s"><img src="https://i.ibb.co/4gSYPLML/kartika.jpg" alt="Kartika" loading="lazy" decoding="async" onerror="this.src='https://i.ibb.co/4gSYPLML.png'"><div class="pi"><div class="pn">Kartika</div><div class="pr">Anggota Keluarga</div></div></div>
+<div class="pc" style="animation-delay:.7s"><img src="https://i.ibb.co/60R5JFYK/maryam.jpg" alt="Maryam" loading="lazy" decoding="async" onerror="this.src='https://i.ibb.co/60R5JFYK.png'"><div class="pi"><div class="pn">Maryam</div><div class="pr">Anggota Keluarga</div></div></div>
+<div class="pc" style="animation-delay:.8s"><img src="https://i.ibb.co/7xP7y1pL/arkan.jpg" alt="Om Arkan" loading="lazy" decoding="async" onerror="this.src='https://i.ibb.co/7xP7y1pL.png'"><div class="pi"><div class="pn">Om Arkan</div><div class="pr">Anggota Keluarga</div></div></div>
+<div class="pc" style="animation-delay:.9s"><img src="https://i.ibb.co/Rk3zwKdJ/arka.jpg" alt="Om Arka" loading="lazy" decoding="async" onerror="this.src='https://i.ibb.co/Rk3zwKdJ.png'"><div class="pi"><div class="pn">Om Arka</div><div class="pr">Anggota Keluarga</div></div></div>
+<div class="pc" style="animation-delay:1s"><img src="https://i.ibb.co/hx3zD1cD/malika.jpg" alt="Malika" loading="lazy" decoding="async" onerror="this.src='https://i.ibb.co/hx3zD1cD.png'"><div class="pi"><div class="pn">Malika</div><div class="pr">Anggota Keluarga</div></div></div>
+</div>
+</div>
+</main>
+<div class="md" id="mpin">
+<div class="mb">
+<div class="mt2">Masukkan PIN</div>
+<div class="pin-dots" id="pdots"><div class="pin-dot"></div><div class="pin-dot"></div><div class="pin-dot"></div><div class="pin-dot"></div></div>
+<div class="pin-grid">
+<button class="pin-btn" data-n="1">1</button><button class="pin-btn" data-n="2">2</button><button class="pin-btn" data-n="3">3</button>
+<button class="pin-btn" data-n="4">4</button><button class="pin-btn" data-n="5">5</button><button class="pin-btn" data-n="6">6</button>
+<button class="pin-btn" data-n="7">7</button><button class="pin-btn" data-n="8">8</button><button class="pin-btn" data-n="9">9</button>
+<div></div><button class="pin-btn" data-n="0">0</button><button class="pin-btn del" data-n="del">⌫</button>
+</div>
+<div class="mbtn"><button class="mbt cc" onclick="cm('mpin')">Batal</button></div>
+</div>
+</div>
+<div class="md" id="ma">
+<div class="mb">
+<div class="mt2">Tambah Acara Baru</div>
+<input type="date" class="mi" id="ta">
+<input type="text" class="mi" id="na" placeholder="Nama Acara">
+<input type="text" class="mi" id="la" placeholder="Lokasi">
+<div class="mbtn"><button class="mbt cc" onclick="cm('ma')">Batal</button><button class="mbt ok" onclick="sa()">Simpan</button></div>
+</div>
+</div>
+<script>
+const $=s=>document.querySelector(s),$$=s=>document.querySelectorAll(s),s=$('#side'),o=$('#ov'),t=$('#toggle'),b=$$('.b'),p=$$('.pg'),tt=$('#ttl'),f=$$('.fi');
+let d=JSON.parse(localStorage.getItem('ac')||'[]'),di=-1,pin='',mode='';
+t.onclick=()=>{s.classList.add('show');o.classList.add('show')}
+o.onclick=()=>{s.classList.remove('show');o.classList.remove('show')}
+b.forEach(x=>x.onclick=()=>{b.forEach(y=>y.classList.remove('a'));x.classList.add('a');p.forEach(y=>y.classList.remove('show'));$('#'+x.dataset.p).classList.add('show');tt.textContent=x.textContent.trim().slice(2);s.classList.remove('show');o.classList.remove('show');if(x.dataset.p==='acara')r()});
+f.forEach(x=>x.onclick=()=>{b.forEach(y=>y.classList.remove('a'));$$('.b[data-p="foto"]').forEach(y=>y.classList.add('a'));p.forEach(y=>y.classList.remove('show'));$('#foto').classList.add('show');tt.textContent='Lihat Foto Keluarga Cemara';s.classList.remove('show');o.classList.remove('show')});
+function r(){const l=$('#al'),e=$('#ae'),c=$('#ac');if(d.length===0){l.innerHTML='';e.style.display='block';c.textContent='0';return}e.style.display='none';c.textContent=d.length;l.innerHTML=d.map((a,i)=>`<div class="c" style="animation-delay:${i*0.1}s"><button class="bd" onclick="sd(${i})"><svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg></button><div class="cl">${new Date(a.t).toLocaleDateString('id-ID',{day:'numeric',month:'long',year:'numeric'})}</div><div class="cv" style="font-size:18px">${a.n}</div><div class="cd2">${a.l}</div></div>`).join('')}
+$('#btn-add').onclick=()=>{mode='add';pin='';up();om('mpin')}
+function om(i){$('#'+i).classList.add('show')}
+function cm(i){$('#'+i).classList.remove('show');pin='';up()}
+function up(){$$('.pin-dot').forEach((e,i)=>{i<pin.length?e.classList.add('f'):e.classList.remove('f')})}
+$$('.pin-btn').forEach(x=>x.onclick=()=>{const n=x.dataset.n;if(n==='del'){pin=pin.slice(0,-1)}else if(pin.length<4){pin+=n}up();if(pin.length===4){setTimeout(()=>{if(pin==='2233'){cm('mpin');if(mode==='add'){om('ma')}else if(mode==='del'){d.splice(di,1);localStorage.setItem('ac',JSON.stringify(d));r()}}else{alert('PIN salah');pin='';up()}},200)}})
+function sa(){const t=$('#ta').value,n=$('#na').value.trim(),l=$('#la').value.trim();if(!t||!n||!l){alert('Lengkapi semua data');return}d.push({t,n,l});localStorage.setItem('ac',JSON.stringify(d));cm('ma');r()}
+function sd(i){di=i;mode='del';pin='';up();om('mpin')}
+if(d.length===0){d=[{t:'2026-04-20',n:'Arisan Keluarga',l:'Rumah Kartika - Kumpul Keluarga Cemara'},{t:'2026-04-25',n:'Ultah Bella',l:'Cafe - Syukuran bareng'}];localStorage.setItem('ac',JSON.stringify(d))}
+</script>
+</body>
+</html>
